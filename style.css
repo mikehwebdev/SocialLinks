@@ -1,0 +1,126 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --black: #141414;
+  --dark-grey:#1f1f1f;
+  --light-grey:#333333;
+  --white:#ffffff;
+  --neon-green:#C4F82A;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--white);
+  min-height: 100vh;
+  
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  
+  background-color: var(--dark-grey);
+  border-radius: 0.75rem;
+  display: grid;
+  grid-template-columns:minmax(1.5rem, 2.5rem) minmax(17.4375rem, 19rem) minmax(1.5rem, 2.5rem);
+  grid-template-rows: 8.5rem 2.5rem repeat(2, 2.8125rem) repeat(4, 3.8125rem) 4.3125rem;
+  grid-template-areas: 
+  
+  ". img ."
+  ". name ."
+  ". location ."
+  ". description ."
+  ". git ."
+  ". fem ."
+  ". link ."
+  ". twi ."
+  ". inst ."
+  ;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  grid-area: img;
+  justify-self: center;
+  align-self: center;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.25rem;
+  grid-area: name;
+  align-self: self-start;
+  justify-self: center;
+}
+
+.location {
+  color: var(--neon-green);
+  font-size: .875rem;
+  font-weight: 700;
+  font-weight: 700;
+  line-height: 1.3125rem;
+  text-align: center;
+  grid-area: location;
+}
+
+.description {
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.3125rem;
+  text-align: center;
+  grid-area: description;
+}
+
+.git {
+  grid-area: git;
+}
+
+.fem {
+  grid-area: fem;
+}
+
+.link {
+  grid-area: link;
+}
+
+.inst {
+  grid-area: inst;
+}
+
+.twi {
+  grid-area: twi;
+}
+
+.btn {
+  list-style: none;
+  font-weight: 700;
+  font-size: .875rem;
+  line-height: 1.3125rem;
+  background-color: var(--light-grey);
+  border-radius: 0.5rem;
+  text-align: center;
+  color: var(--white);
+  height: 2.8125rem;
+  border: none;
+}
+
+.btn:hover{
+  cursor: pointer;
+  background-color: var(--neon-green);
+  color: var(--dark-grey);
+}
+
+
+
+@media screen and (min-width:450px){
+  .card {
+    grid-template-rows: 9.5rem 2.5rem repeat(2, 2.8125rem) repeat(4, 3.8125rem) 5.3125rem;
+} 
+}
